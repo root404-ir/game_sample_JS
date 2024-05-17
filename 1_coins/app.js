@@ -37,8 +37,6 @@ function tossCoin(e) {
                 score[0] = null
                 score[1] = null
             }
-
-
         }
     }
 }
