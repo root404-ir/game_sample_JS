@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    animation: background_rgb 6s infinite;
+}
+@keyframes background_rgb
+{
+    0%{
+        background-color: #139213;
+    }
+    15%{
+        background-color: #db09f7;
+    }
+    20%{
+        background-color: #0994f7;
+    }
+    25%{
+        background-color: #f70909;
+    }
+    35%{
+        background-color: #4c09f7;
+    }
+    50%{
+        background-color: #f8119b;
+    }
+    100%{
+        background-color: #f1b40b;
+    }
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ask-me
+{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 30px;
+}
