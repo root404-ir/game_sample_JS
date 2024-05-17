@@ -30,8 +30,14 @@ function tossCoin(e) {
             window.alert("computer win")
         }
         if (score[0] > score[1] || score[0] < score[1]) {
-            score[0] = null
-            score[1] = null
+            if (confirm("closed the window?")) {
+                window.close()
+            } else {
+                alert("edame >> ok")
+                score[0] = null
+                score[1] = null
+            }
+
 
         }
     }
