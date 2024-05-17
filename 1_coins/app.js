@@ -33,7 +33,7 @@ function tossCoin(e) {
             if (confirm("closed the window?")) {
                 window.close()
             } else {
-                alert("edame >> ok")
+                alert("continue >> ok")
                 score[0] = null
                 score[1] = null
             }
