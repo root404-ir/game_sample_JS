@@ -12,7 +12,7 @@ function tossCoin(e) {
     let computerGuess = coinArray[computerToss]
     message.innerHTML = " computer selected :" + computerGuess + "<br\>"
     let output
-    if (playerGuess < computerGuess) {
+    if (playerGuess === computerGuess) {
         output = "player Win. "
         score[0]++
     }
@@ -24,10 +24,11 @@ function tossCoin(e) {
     if (score[0] === 20 || score[1] === 20) {
         alert("Finish")
         if (score[0] > score[1]) {
-            alert("players win")
+            window.alert("players win")
+            
         }
         else {
-            alert("computer win")
+            window.alert("computer win")
         }
         if (score[0] > score[1] || score[0] < score[1]) {
             score[0] = null
