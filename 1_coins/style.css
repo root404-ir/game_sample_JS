@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poetsen One", sans-serif;
+    background-color: black;
+    color: #fff;
+    height: 100vh;
+}
+
+.coins_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container {
+    background-image: linear-gradient(to left, #dddd, #e8f9);
+    box-shadow: 0 0 100px #ee82ee;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    border: 5px solid;
+    animation: color 10s infinite;
+}
+
+@keyframes color {
+    10% {
+        border-color: #ff0000;
+    }
+
+    30% {
+        border-color: #00ffaa;
+    }
+
+    40% {
+        border-color: #ff00b3;
+    }
+
+    50% {
+        border-color: #5f9ea0;
+    }
+
+    60% {
+        border-color: #ee82ee;
+    }
+
+    70% {
+        border-color: #ff6347;
+    }
+
+    80% {
+        border-color: #9400d3;
+    }
+
+    90% {
+        border-color: #ff8c00;
+    }
+
+    100% {
+        border-color: #b8860b;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 13px;
+
+}
+
+.coins {
+    border: 0;
+    cursor: pointer;
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.message {
+    line-height: 40px;
+}
+
+.heads {
+
+    background-color: #d402d4;
+    color: #fff;
+}
+
+.tails {
+    background-color: #fff;
+    color: #d402d4;
+}
+
+.heads:hover {
+
+    background-color: #fff;
+    color: #d402d4;
+}
+
+.tails:hover {
+    background-color: #d402d4;
+    color: #fff;
+}
