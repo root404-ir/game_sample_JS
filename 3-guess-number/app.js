@@ -10,22 +10,31 @@ startBtn.addEventListener("click", function () {
         maker()
         startBtn.innerHTML = "check combo"
     } else {
-        var numbers = document.querySelectorAll('.number_input')
+        let numbers = document.querySelectorAll('.number_input')
         score++
         message.innerHTML = "Guesses " + score
+        let winCondition = 0
         for (let x = 0; x < numbers.length; x++) {
             if (numbers[x].value == numbers[x].random) {
-                console.log("match");
+                numbers[x].style.backgroundColor = "green"
+                numbers[x].style.color = "white"
+                winCondition++
             }
             else {
-                console.log("no match");
+                let color = (numbers[x].value < numbers[x].random) ? "blue" : "red"
+                numbers[x].style.backgroundColor = color
+                numbers[x].style.color = "black"
             }
+            if(winCondition === numbers.length)
+                {
+                    console.log("gameFinished");
+                }
         }
     }
 })
 let maker = () => {
     for (let i = 0; i < 5; i++) {
-        var element = document.createElement('input')
+        let element = document.createElement('input')
         element.setAttribute('type', 'number')
         element.max = 9
         element.min = 1
@@ -33,7 +42,8 @@ let maker = () => {
         element.size = 1
         element.classList.add('number_input')
         element.random = Math.floor(Math.random() * 10)
-        element.value = element.random
+        element.value = 0
         element.order = i
+        gameArea.appendChild(element)
     }
 }
