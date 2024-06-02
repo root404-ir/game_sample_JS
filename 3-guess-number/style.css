@@ -1,8 +1,138 @@
-span
-{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
     display: block;
 }
-.number_input
-{
-    font-size: 1.5rem;
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png');
+    animation: 10s linear 0s normal none infinite animate;
+    color: #fff;
+    line-height: 5rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
+
+button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+    transform: translateX(7px);
+}
+
+@keyframes animate {
+    to {
+        background-position: 0 0;
+    }
+
+    from {
+        background-position: 500px 0;
+    }
+}
+
+@keyframes border_color {
+    0% {
+        border-color: #8a2be2;
+    }
+
+    10% {
+        border-color: #00ffff;
+    }
+
+    20% {
+        border-color: #7fff00;
+    }
+
+    30% {
+        border-color: #6495ed;
+    }
+
+    40% {
+        border-color: #ff8c00;
+    }
+
+    50% {
+        border-color: #ff00ff;
+    }
+
+    60% {
+        border-color: #ff00ff;
+    }
+
+    70% {
+        border-color: #ff0000;
+    }
+
+    80% {
+        border-color: #ffee00;
+    }
+
+    90% {
+        border-color: #00ff9d;
+    }
+
+    100% {
+        border-color: #a6ff00;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.number_input {
+    font-size: 2rem;
+    border: 0;
+    border: 3px solid #2980b9;
+    border-radius: 5px;
+    margin: 4px;
+    animation: border_color 10s infinite;
+    width: 70px;
+    height: 40px;
+    
+}
+
+.message_header {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.status-message {
+    font-size: 1rem;
+    font-weight: 500;
 }

@@ -3,22 +3,22 @@ const gameArea = document.querySelector('.game')
 const startBtn = document.querySelector('.start')
 const message = document.querySelector('.message_header')
 let gamePlay = false
-let score = 0
+let socre = 0
 //set click event for button
 startBtn.addEventListener("click", function () {
     if (!gamePlay) {
         gamePlay = true
         //When the game is reset، the inputs are null.
         gameArea.innerHTML = null
-        score = 0
+        socre = 0
         //Here dynamically argument you can set the number of Harar inputs in real time
         maker(5)
-        startBtn.innerHTML = "check combo"
+        startBtn.innerHTML = "check rasult"
         message.innerHTML = "Guess the Combo"
     } else {
         let numbers = document.querySelectorAll('.number_input')
-        score++
-        message.innerHTML = "Guesses " + score
+        socre++
+        message.innerHTML = "Guesses " + socre
         let winCondition = 0
         for (let x = 0; x < numbers.length; x++) {
             if (numbers[x].value == numbers[x].random) {
@@ -38,11 +38,11 @@ startBtn.addEventListener("click", function () {
     }
 })
 let gameEnd = () => {
-    message.innerHTML = "You solved the combo in " + score + " guesses "
+    message.innerHTML = "You solved the combo in " + socre + " guesses "
     //restart the game
     gamePlay = false
     //text button changed to reser
-    startBtn.innerHTML = "reset"
+    startBtn.innerHTML = "Restart Game"
 }
 
 //create input element //num_input parameter for dynamic input number
@@ -54,8 +54,6 @@ let maker = (num_input) => {
         //minimum and maximum input
         element.max = 9
         element.min = 1
-        //input styles
-        element.style.width = "50px"
         element.size = 1
         //added the class
         element.classList.add('number_input')
