@@ -2,10 +2,11 @@
 const message_header = document.querySelector('.message')
 const word_input = document.querySelector('.hidden')
 const guess_button = document.querySelector('.start')
-const wordsArray = ["محمد", "علی", "غذا", "ماشین", "لباس", "خونه", "جاوا اسکریپت", "اکما اسکریپت", "خیابان"] //word list array
+const wordsArray = ["name", "car", "food", "eggs", "home", "country", "css", "html", "street"] //word list array
 //game play false default
 let playGame = false
 let scramble = null
+scramble = false
 let scrambled = null
 let score = 0
 //add event click start buttton
