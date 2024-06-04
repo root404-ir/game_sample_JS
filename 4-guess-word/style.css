@@ -1,4 +1,135 @@
-.hidden
-{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: fantasy;
+    height: 100vh;
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+}
+
+.slider-thumb::before {
+    position: absolute;
+    content: "";
+    left: 33%;
+    top: 20%;
+    width: 450px;
+    height: 450px;
+    background: #17141d;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    -webkit-animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    animation: sliderShape 5s linear infinite;
+}
+
+@keyframes sliderShape {
+
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.message {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.word_input {
+    border: 0;
+    outline: 0;
+    width: 25%;
+    padding: 10px 13px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.word_input:hover {
+    border: 4px solid #e52e71;
+}
+
+.hidden {
     display: none;
+}
+
+.start {
+    border: 0;
+    outline: 0;
+    margin-top: 1.5rem;
+    padding: 7px 13px;
+    border-radius: 10px;
+    background-color: #ff8a00;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 4px 4px 4px #17141d;
+    transition: all 0.3s ease-in-out;
+}
+
+.start:hover {
+    transform: scale(1.3, 1.3);
+    animation: 1s btn_animate infinite;
+    border: 3px solid;
+}
+
+@keyframes btn_animate {
+    0% {
+        border-color: #e52e71;
+    }
+    25%
+    {
+        border-color: #ff8a00;
+    }
+    40%
+    {
+        border-color: #7fff00;
+    }
+    50%
+    {
+        border-color: #00ffff;
+    }
+    70%
+    {
+        border-color: #ff00d4;
+    }
+    90%
+    {
+        border-color: #c8ff00;
+    }
+    100%
+    {
+        border-color: #ff0000;
+    }
 }

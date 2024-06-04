@@ -15,7 +15,7 @@ guess_button.addEventListener('click', function () {
     if (!playGame) {
         playGame = true
         //inner text tag 
-        guess_button.innerHTML = "=> guess"
+        guess_button.innerHTML = "guess"
         //toggle iunput
         //if click added class 
         word_input.classList.toggle('hidden')
