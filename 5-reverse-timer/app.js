@@ -3,19 +3,12 @@ const dateInput = document.querySelector("input[name='endDate']")
 const clock = document.querySelector(".clock")
 let timeInterval
 let timeStop = true
-const saveValue = localStorage.getItem("countdown") || false
-if (saveValue) {
-    startClock(saveValue);
-    let inputValue = new Date(saveValue);
-    dateInput.valueAsDate = inputValue;
-}
-//change evnet of input date
+//change evnet of input dat
 dateInput.addEventListener("change", function (e) {
     //disable event use the prevntDefault method
-    e.preventDefault()
+    e.preventDefault();
     clearInterval(timeInterval)
     const temp = new Date(dateInput.value)
-    localStorage.setItem("countdown", temp)
     startClock(temp)
     timeStop = true
 })
@@ -45,7 +38,7 @@ let timeLeft = (d) => {
     let t = Date.parse(d) - Date.parse(currentDate)
     let seconds = Math.floor((t / 1000) % 60)
     let minutes = Math.floor(((t / 1000) / 60) % 60)
-    let hours = Math.floor(t / (1000 * 60 * 60) % 24)
+    let hours = Math.floor((t / (1000 * 60 * 60)) % 24)
     let days = Math.floor(t / (1000 * 60 * 60 * 24))
 
     return {

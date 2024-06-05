@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk:MORF@11&family=Nabla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bungee Spice";
+    height: 100vh;
+    background: url('img/pexels-donaldtong94-23475.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(7px);
+    border: 3px solid #789123;
+    border-radius: 3px;
+    animation: 4s body_border infinite;
+}
+@keyframes body_border {
+    0% {
+        border-color: #e52e71;
+    }
+    25%
+    {
+        border-color: #ff8a00;
+    }
+    40%
+    {
+        border-color: #7fff00;
+    }
+    50%
+    {
+        border-color: #00ffff;
+    }
+    70%
+    {
+        border-color: #ff00d4;
+    }
+    90%
+    {
+        border-color: #c8ff00;
+    }
+    100%
+    {
+        border-color: #ff0000;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+.dd{
+    position: relative;
+}
+.dd input[type=date]
+{
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 13px;
+}
+.dd svg
+{
+    position: absolute;
+    top: 2px;
+    left: -40px;
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0 0 10px  black;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+.clock {
+    font-size: 2rem;
+    letter-spacing: 12px;
+    background-color: black;
+    padding: 3px 13px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
